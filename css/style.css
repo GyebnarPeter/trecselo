@@ -96,7 +96,7 @@ nav ul li a {
 ----------------------------------------------------*/
 .slider {
   width: 100%;
-  background: url("../img/slider-bg.jpg") no-repeat center center;
+  background: url("../img/slider-bg.jpg") no-repeat center bottom;
   background-size: cover;
   text-align: center;
   overflow: hidden;
@@ -199,6 +199,52 @@ nav ul li a {
   border: 1px solid #453e3c;
 }
 
+/* OUR COFFEE
+----------------------------------------------------*/
+.our-coffee {
+  width: 100%;
+  background: url("../img/about-our-coffee-bg.jpg") no-repeat center top;
+  background-size: cover;
+  display: flex;
+  padding: 120px 0 50px 0;
+}
+
+.our-coffee-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.our-coffee-left-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-coffee-right-box h2 {
+  font-family: "Noto Serif", serif;
+  font-size: 5em;
+  color: #453e3c;
+  line-height: 1;
+}
+.our-coffee-right-box h2 span {
+  display: block;
+  font-family: "Courgette", cursive;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 2;
+}
+.our-coffee-right-box p {
+  width: 70%;
+  color: #453e3c;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.our-coffee-right-box img {
+  width: 300px;
+}
+
 @media screen and (max-width: 1200px) {
   header {
     padding: 10px 50px;
@@ -241,6 +287,18 @@ nav ul li a {
     transform: translateX(0);
   }
 }
+@media screen and (max-width: 992px) {
+  .our-coffee-left-box {
+    display: none;
+  }
+
+  .our-coffee-right-box {
+    text-align: center;
+  }
+  .our-coffee-right-box p {
+    margin: 0 auto 30px auto;
+  }
+}
 @media screen and (max-width: 768px) {
   nav {
     width: 100%;
@@ -264,6 +322,13 @@ nav ul li a {
   }
   .slider .coffee-bean-1, .slider .coffee-bean-2 {
     display: none;
+  }
+
+  .our-coffee-right-box h2 {
+    font-size: 3em;
+  }
+  .our-coffee-right-box img {
+    width: 300px;
   }
 }
 
