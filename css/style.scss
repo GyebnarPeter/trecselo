@@ -3,6 +3,10 @@ font-family: 'Courgette', cursive;
 font-family: 'Newsreader', serif;
 */
 
+$text-color: #a6a19f;
+$header-text-color: #453e3c;
+$link-color-green: #009f3b;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +14,8 @@ font-family: 'Newsreader', serif;
 }
 
 body {
-    font-family: 'Courgette', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $text-color;
 }
 
 
@@ -69,8 +74,9 @@ nav {
 
             a {
                 text-decoration: none;
-                color: black;
+                color: $header-text-color;
                 margin-left: 50px;
+                font-family: 'Courgette', cursive;
             }
         }
     }
@@ -122,6 +128,8 @@ nav {
         font-size: 5vw;
         padding-top: 10%;
         z-index: 20;
+        font-family: 'Courgette', cursive;
+        color: $header-text-color;
 
         span {
             font-family: 'Newsreader', serif;
@@ -167,10 +175,62 @@ nav {
     }
 }
 
-main {
-    height: 2000px;
-    //border: 3px solid red;
+/* WELCOME MESSAGE
+----------------------------------------------------*/
+
+.welcome-message {
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 30px;
+    text-align: center;
+
+    h2 {
+        font-family: 'Noto Serif', serif;
+        text-transform: uppercase;
+        font-size: 1.8em;
+        letter-spacing: 4px;
+        color: $header-text-color;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 30px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $link-color-green;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border: 1px solid $link-color-green;
+        padding: 20px 30px;
+        display: inline-block;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid $text-color;
+            transform: translateX(2px);
+            transform: translateY(2px);
+        }
+
+        &:hover {
+            color: $header-text-color;
+            border: 1px solid $header-text-color;
+        }
+    }
 }
+
 
 @media screen and (max-width: 1200px) {
 
