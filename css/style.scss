@@ -4,7 +4,7 @@ font-family: 'Newsreader', serif;
 */
 
 $text-color: #a6a19f;
-$header-text-color: #453e3c;
+$header-text-color: #423930;
 $link-color-green: #009f3b;
 
 * {
@@ -76,7 +76,12 @@ nav {
                 text-decoration: none;
                 color: $header-text-color;
                 margin-left: 50px;
-                font-family: 'Courgette', cursive;
+                font-family: 'Noto Serif', serif;
+                font-weight: 600;
+
+                &:hover {
+                    color: $link-color-green;
+                }
             }
         }
     }
@@ -128,13 +133,15 @@ nav {
         font-size: 5vw;
         padding-top: 10%;
         z-index: 20;
-        font-family: 'Courgette', cursive;
+        font-family: 'Grand Hotel', cursive;
         color: $header-text-color;
+        font-weight: 200;
 
         span {
             font-family: 'Newsreader', serif;
             display: block;
-            font-weight: 400;
+            font-weight: 700;
+            font-size: 6vw;
         }
     }
 
@@ -240,7 +247,7 @@ nav {
     background: url("../img/about-our-coffee-bg.jpg") no-repeat center top;
     background-size: cover;
     display: flex;
-    padding: 120px 0 50px 0;
+    padding: 120px 0 0 0;
 }
 
 .our-coffee-box {
@@ -254,19 +261,23 @@ nav {
 .our-coffee-left-box {
     display: flex;
     flex-direction: column;
+
+    img:first-child {
+        width: 300px;
+    }
 }
 
 .our-coffee-right-box {
     
     h2 {
         font-family: 'Noto Serif', serif;
-        font-size: 5em;
+        font-size: 4em;
         color: $header-text-color;
         line-height: 1;
 
         span {
             display: block;
-            font-family: 'Courgette', cursive;
+            font-family: 'Grand Hotel', cursive;
             font-size: 0.8em;
             font-weight: 400;
             line-height: 2;
@@ -281,9 +292,98 @@ nav {
     }
 
     img {
-        width: 300px;
+        width: 200px;
     }
 }
+
+/* DRINKS
+----------------------------------------------------*/
+
+.drinks-head {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+
+    h2 {
+        font-family: 'Noto Serif', serif;
+        text-transform: uppercase;
+        font-size: 1.8em;
+        letter-spacing: 4px;
+        color: $header-text-color;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 30px 0;
+        padding: 0 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $link-color-green;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border: 1px solid $link-color-green;
+        padding: 20px 30px;
+        display: inline-block;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid $text-color;
+            transform: translateX(2px);
+            transform: translateY(2px);
+        }
+
+        &:hover {
+            color: $header-text-color;
+            border: 1px solid $header-text-color;
+        }
+    }
+}
+
+.drinks-body {
+    width: 100%;
+    background: url("../img/drinks-bg.jpg") no-repeat center bottom;
+    background-size: cover;
+}
+
+.drinks-boxes {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0 300px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.drink-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        font-family: 'Grand Hotel', cursive;
+        margin: 20px 0;
+        color: $header-text-color;
+        font-size: 2em;
+        font-weight: 200;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
 
@@ -332,6 +432,11 @@ nav {
         transform: translateX(0);
     }
 
+    .drinks-boxes {
+        width: 900px;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -347,7 +452,10 @@ nav {
             margin: 0 auto 30px auto;
         }
     }
-    
+
+    .drinks-boxes {
+        width: 700px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -392,5 +500,14 @@ nav {
         img {
             width: 300px;
         }
+    }
+
+    .drinks-body {
+        background: rgba(0, 0, 0, .1);
+    }
+
+    .drinks-boxes {
+        width: 100%;
+        grid-template-columns: 1fr;
     }
 }

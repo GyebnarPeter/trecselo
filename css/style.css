@@ -62,9 +62,13 @@ nav ul {
 }
 nav ul li a {
   text-decoration: none;
-  color: #453e3c;
+  color: #423930;
   margin-left: 50px;
-  font-family: "Courgette", cursive;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+}
+nav ul li a:hover {
+  color: #009f3b;
 }
 
 .nav-btn {
@@ -109,13 +113,15 @@ nav ul li a {
   font-size: 5vw;
   padding-top: 10%;
   z-index: 20;
-  font-family: "Courgette", cursive;
-  color: #453e3c;
+  font-family: "Grand Hotel", cursive;
+  color: #423930;
+  font-weight: 200;
 }
 .slider h2 span {
   font-family: "Newsreader", serif;
   display: block;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 6vw;
 }
 .slider .slider-cup {
   position: relative;
@@ -163,7 +169,7 @@ nav ul li a {
   text-transform: uppercase;
   font-size: 1.8em;
   letter-spacing: 4px;
-  color: #453e3c;
+  color: #423930;
 }
 .welcome-message p {
   font-weight: 500;
@@ -195,8 +201,8 @@ nav ul li a {
   transform: translateY(2px);
 }
 .welcome-message a:hover {
-  color: #453e3c;
-  border: 1px solid #453e3c;
+  color: #423930;
+  border: 1px solid #423930;
 }
 
 /* OUR COFFEE
@@ -206,7 +212,7 @@ nav ul li a {
   background: url("../img/about-our-coffee-bg.jpg") no-repeat center top;
   background-size: cover;
   display: flex;
-  padding: 120px 0 50px 0;
+  padding: 120px 0 0 0;
 }
 
 .our-coffee-box {
@@ -221,28 +227,112 @@ nav ul li a {
   display: flex;
   flex-direction: column;
 }
+.our-coffee-left-box img:first-child {
+  width: 300px;
+}
 
 .our-coffee-right-box h2 {
   font-family: "Noto Serif", serif;
-  font-size: 5em;
-  color: #453e3c;
+  font-size: 4em;
+  color: #423930;
   line-height: 1;
 }
 .our-coffee-right-box h2 span {
   display: block;
-  font-family: "Courgette", cursive;
+  font-family: "Grand Hotel", cursive;
   font-size: 0.8em;
   font-weight: 400;
   line-height: 2;
 }
 .our-coffee-right-box p {
   width: 70%;
-  color: #453e3c;
+  color: #423930;
   line-height: 1.5;
   margin-bottom: 50px;
 }
 .our-coffee-right-box img {
-  width: 300px;
+  width: 200px;
+}
+
+/* DRINKS
+----------------------------------------------------*/
+.drinks-head {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px 0;
+}
+.drinks-head h2 {
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 4px;
+  color: #423930;
+}
+.drinks-head p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 30px 0;
+  padding: 0 20px;
+}
+.drinks-head a {
+  text-decoration: none;
+  color: #009f3b;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 1px solid #009f3b;
+  padding: 20px 30px;
+  display: inline-block;
+  position: relative;
+}
+.drinks-head a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #a6a19f;
+  transform: translateX(2px);
+  transform: translateY(2px);
+}
+.drinks-head a:hover {
+  color: #423930;
+  border: 1px solid #423930;
+}
+
+.drinks-body {
+  width: 100%;
+  background: url("../img/drinks-bg.jpg") no-repeat center bottom;
+  background-size: cover;
+}
+
+.drinks-boxes {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0 300px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.drink-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.drink-box p {
+  font-family: "Grand Hotel", cursive;
+  margin: 20px 0;
+  color: #423930;
+  font-size: 2em;
+  font-weight: 200;
 }
 
 @media screen and (max-width: 1200px) {
@@ -286,6 +376,11 @@ nav ul li a {
   .nav-toggle {
     transform: translateX(0);
   }
+
+  .drinks-boxes {
+    width: 900px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 992px) {
   .our-coffee-left-box {
@@ -297,6 +392,10 @@ nav ul li a {
   }
   .our-coffee-right-box p {
     margin: 0 auto 30px auto;
+  }
+
+  .drinks-boxes {
+    width: 700px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -329,6 +428,15 @@ nav ul li a {
   }
   .our-coffee-right-box img {
     width: 300px;
+  }
+
+  .drinks-body {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .drinks-boxes {
+    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
