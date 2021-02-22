@@ -384,6 +384,154 @@ nav {
     }
 }
 
+/* RECOMMENDER
+----------------------------------------------------*/
+
+.recommender {
+    width: 100%;
+    background: #211f1e;
+    padding: 100px 0;
+}
+
+.recommender-boxes {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.recommender-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 30px;
+}
+
+.recommender-right-box {
+    align-items: flex-start;
+    color: white;
+    padding-top: 100px;
+
+    img {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-family: 'Grand Hotel', cursive;
+        font-size: 7em;
+        font-weight: 200;
+    }
+
+    h4 {
+        font-family: 'Noto Serif', serif;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 200;
+        letter-spacing: 2px;
+        margin: 20px 0 40px 0;
+
+        span {
+            display: block;
+            text-transform: initial;
+        }
+    }
+
+    p {
+        width: 70%;
+        line-height: 1.6;
+    }
+}
+
+
+/* CAFFEE POSTER
+----------------------------------------------------*/
+
+.coffee-poster {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 100px 0;
+    background: url("../img/caffee-machine.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* FOOTER
+----------------------------------------------------*/
+
+footer {
+    background: #211f1e;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer-logo {
+    width: 800px;
+    margin: 0 auto;
+
+    p {
+        margin: 50px 0;
+    }
+}
+
+.footer-contact {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-contact-box {
+    color: white;
+    padding: 0 30px;
+}
+
+.footer-social {
+    margin: 50px 0 100px 0;
+
+    .footer-social-logo {
+        background: rgba(100, 100, 100, 0.5);
+        width: 25px;
+        height: 25px;
+        margin: 0 15px;
+        display: inline-block;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+            background: #C59D5F;
+        }
+    }
+
+    .twitter-logo {
+        mask:         url("../img/twitter.svg") no-repeat center / contain;
+        -webkit-mask: url("../img/twitter.svg") no-repeat center / contain;
+    }
+
+    .facebook-logo {
+        mask:         url("../img/facebook.svg") no-repeat center / contain;
+        -webkit-mask: url("../img/facebook.svg") no-repeat center / contain;
+    }
+
+    .instagram-logo {
+        mask:         url("../img/instagram.svg") no-repeat center / contain;
+        -webkit-mask: url("../img/instagram.svg") no-repeat center / contain;
+    }
+}
+
+.footer-footnote {
+
+    span {
+        color: white;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
 
@@ -437,6 +585,17 @@ nav {
         grid-template-columns: 1fr 1fr;
     }
 
+    .recommender-box {
+        width: 50%;
+    }
+
+    .recommender-left-box {
+        
+        img {
+            width: 100%;
+        }
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -455,6 +614,28 @@ nav {
 
     .drinks-boxes {
         width: 700px;
+    }
+
+    .recommender-boxes {
+        flex-direction: column;
+    }
+
+    .recommender-box {
+        width: 100%;
+    }
+
+    .recommender-right-box {
+        align-items: center;
+        text-align: center;
+
+        img {
+            display: none;
+        }
+    }
+
+    .footer-logo {
+        width: 100%;
+        padding: 0 30px;
     }
 }
 
@@ -508,6 +689,31 @@ nav {
 
     .drinks-boxes {
         width: 100%;
+        padding-bottom: 100px;
         grid-template-columns: 1fr;
+    }
+
+    .coffee-poster {
+
+        img {
+            width: 300px;
+        }
+    }
+
+    .recommender-right-box {
+        padding-top: 0;
+        
+        h2 {
+            font-size: 4.5em;
+        }
+    }
+
+    .footer-contact {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-footnote {
+        padding: 0 30px;
     }
 }
